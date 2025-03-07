@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - main
-    ignore:
-      - "*/k8s/*"
-      - "*/kubernetes/"
-      - "*/helm/*"
+    paths-ignore:
+      - "helm/**" # Ignore all changes inside helm/
+      - "k8s/**" # Ignore all changes inside k8s/
+      - "kubernetes/**" # Ignore all changes inside kubernetes/
+      - "**/values.yaml" # Ignore updates to any values.yaml file
 
 jobs:
   build:
