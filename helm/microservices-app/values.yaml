@@ -1,0 +1,18 @@
+
+ingress:
+  enabled: false
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: scalable.app.local
+      paths:
+
+
+mongodbSecrets:
+
+  userServiceUri: bW9uZ29kYitzcnY6Ly92aXB1bDEyMzpEZXZvcHMxMjNAY2x1c3RlcjAuMHpvY3djay5tb25nb2RiLm5ldC8=  
+  productServiceUri: bW9uZ29kYitzcnY6Ly92aXB1bDEyMzpEZXZvcHMxMjNAY2x1c3RlcjAuMHpvY3djay5tb25nb2RiLm5ldC8=  
+
+mongodbConfig:
+  userDatabaseName: "userdb"
+  productDatabaseName: "productdb"

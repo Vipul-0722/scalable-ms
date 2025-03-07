@@ -1,0 +1,9 @@
+dependencies:
+- name: user-service
+  repository: ""
+  version: 0.1.0
+- name: product-service
+  repository: ""
+  version: 0.1.0
+digest: sha256:6e1ae397d69a5d53477369654e0dbf424fb60c63e6abe769262990603ad62cef
+generated: "2025-03-07T19:49:34.665967+05:30"

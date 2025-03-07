@@ -1,0 +1,14 @@
+apiVersion: v2
+name: microservices-app
+description: An umbrella chart for deploying multiple microservices
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
+dependencies:
+  - name: user-service
+    version: 0.1.0
+  - name: product-service
+    version: 0.1.0
+
+
