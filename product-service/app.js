@@ -90,7 +90,7 @@ app.delete("/api/products/:id", async (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Product service running on port: {Test PORT} ${PORT}`);
+  console.log(`Product service running on port: {Test2 PORT} ${PORT}`);
 });
 
 module.exports = app;
