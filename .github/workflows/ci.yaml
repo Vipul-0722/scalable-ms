@@ -5,9 +5,9 @@ on:
     branches:
       - main
     ignore:
-      - "*/k8s-*"
-      - "*/kubernetes-*"
-      - "*/helm-*"
+      - "*/k8s/*"
+      - "*/kubernetes/"
+      - "*/helm/*"
 
 jobs:
   build:
