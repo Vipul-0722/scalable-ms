@@ -33,6 +33,7 @@ jobs:
           context: ./user-service
           file: ./user-service/dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/user-service:${{github.run_id}}
 
       - name: Build and push Product Service
@@ -41,6 +42,7 @@ jobs:
           context: ./product-service
           file: ./product-service/dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/product-service:${{github.run_id}}
 
   update-newtag-in-helm-chart:
