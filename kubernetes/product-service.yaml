@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: product-service
-        image: vipul710/product-service:latest
+        image: vipul710/product-service:test
         ports:
         - containerPort: 3001
         env:
@@ -33,18 +33,6 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "200m"
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 3001
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 3001
-          initialDelaySeconds: 15
-          periodSeconds: 20
 ---
 apiVersion: v1
 kind: Service

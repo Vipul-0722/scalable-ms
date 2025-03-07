@@ -4,8 +4,8 @@ metadata:
   name: mongodb-secret
 type: Opaque
 data:
-  user-service-uri: mongodb+srv://vipul123:Devops123@cluster0.0zocwck.mongodb.net/  # base64 encoded
-  product-service-uri: mongodb+srv://vipul123:Devops123@cluster0.0zocwck.mongodb.net/  # base64 encoded
+  user-service-uri: bW9uZ29kYitzcnY6Ly92aXB1bDEyMzpEZXZvcHMxMjNAY2x1c3RlcjAuMHpvY3djay5tb25nb2RiLm5ldC8=  # base64 encoded
+  product-service-uri: bW9uZ29kYitzcnY6Ly92aXB1bDEyMzpEZXZvcHMxMjNAY2x1c3RlcjAuMHpvY3djay5tb25nb2RiLm5ldC8=  # base64 encoded
 ---
 apiVersion: v1
 kind: ConfigMap

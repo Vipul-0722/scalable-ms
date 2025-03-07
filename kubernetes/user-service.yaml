@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: vipul710/user-service:latest
+        image: vipul710/user-service:test
         ports:
         - containerPort: 3000
         env:
@@ -33,18 +33,7 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "200m"
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 3000
-          initialDelaySeconds: 15
-          periodSeconds: 20
+
 ---
 apiVersion: v1
 kind: Service
