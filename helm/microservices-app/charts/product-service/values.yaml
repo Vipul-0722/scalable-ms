@@ -1,4 +1,3 @@
-
 replicaCount: 2
 image:
   repository: nginx
@@ -9,17 +8,22 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+# serviceMonitor:
+#   enabled: true
+#   path: /metrics # Your microservices must expose /metrics endpoint
+#   interval: 15s
+#   labels:
+#     release: prometheus
 
 service:
   type: ClusterIP
   port: 80
 
 resources: {}
- 
+
 autoscaling:
   enabled: false
   minReplicas: 2
   maxReplicas: 5
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 40
   # targetMemoryUtilizationPercentage: 80
-
