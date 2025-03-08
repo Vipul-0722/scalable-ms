@@ -82,6 +82,7 @@ app.put('/api/users/:id', async (req, res) => {
   }
 });
 
+// Delete user
 app.delete('/api/users/:id', async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);
