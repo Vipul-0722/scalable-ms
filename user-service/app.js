@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+//const promClient = require('prom-client');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://vipul123:Devops123@cluster0.0zocwck.mongodb.net/';
@@ -10,6 +10,8 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://vipul123:Devops123
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+// pod chnges to deployu
 
 // MongoDB Connection
 mongoose.connect(MONGODB_URI)
@@ -26,10 +28,15 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
+// const collectDefaultMetrics = promClient.collectDefaultMetrics;
+// collectDefaultMetrics();
 // Health Check
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'UP', service: 'user-service' });
+app.get("/metrics", async (req, res) => {
+  console.log("health check");
+  // res.set('Content-Type', promClient.register.contentType);
+  // res.end(await promClient.register.metrics());
 });
+
 
 // Routes
 app.get('/api/users', async (req, res) => {
